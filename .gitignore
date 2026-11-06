@@ -1,1 +1,27 @@
+# data & experiment outputs
+data/
+runs/
+logs/
+*.pt
+*.pth
+*.npy
 archive.zip
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# notebooks
+.ipynb_checkpoints/
+
+# os / editors
+.DS_Store
+.vscode/
+.idea/
