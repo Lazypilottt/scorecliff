@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scorecliff"
+version = "0.2.0"
+description = "Hard-negative mining (QuRe score-drop, query clustering, random) for CLIP text-to-image retrieval"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Aditya Yadav" }]
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.3",
+    "torchvision>=0.18",
+    "open_clip_torch>=2.24",
+    "numpy>=1.24",
+    "pandas>=1.5",
+    "pillow>=9.0",
+    "scikit-learn>=1.3",
+    "tqdm>=4.60",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+scorecliff = "scorecliff.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scorecliff*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::UserWarning"]

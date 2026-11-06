@@ -1,0 +1,11 @@
+# Versions used for the experiments (Kaggle, Nov 2025). Any recent versions should work.
+torch>=2.3            # tested 2.6.0+cu124
+torchvision>=0.18     # tested 0.21.0
+open_clip_torch>=2.24 # tested 3.2.0
+numpy>=1.24
+pandas>=1.5
+pillow>=9.0
+scikit-learn>=1.3     # >=1.3 ships HDBSCAN
+tqdm>=4.60
+kagglehub>=0.2        # only needed to download COCO outside Kaggle
+pytest>=7             # tests
